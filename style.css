@@ -18,6 +18,7 @@ html{
 
 body{
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 .profile{
     position: relative;
@@ -153,6 +154,21 @@ body{
 .profile .header a:hover{
     background-color: var(--secondary-color);
     transition: all 0.5s ease;
+}
+
+/* CHEF SECTION */
+.chef{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+.chef .chef-header span{
+    
+}
+.chef .chef-image{
+    min-height: 50vh;
+    min-width: 50vw;
+    background: url("images/Nusret-profile.jpg") no-repeat center center/cover;
 }
 
 @media only screen and (max-width:1400px){
