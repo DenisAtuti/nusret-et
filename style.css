@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,400;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root{
+    --primary-color:#E31C25;
+    --secondary-color:#BB000E;
+    --primary-text-color:#111111;
+    --secondary-text-color:#161616;
+    --span-color:#1C1C1C;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.profile{
+    position: relative;
+    height: 100vh;
+    background: url("images/profile3.jpg") no-repeat center center/cover;
+}
+.profile .navigation{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.profile .navigation .burgerIcon{
+    font-size: 4rem;
+    cursor: pointer;
+    display: none;
+}
+
+.profile .navigation .nav ul{
+    display: flex;
+    align-items: center;
+}
+.profile .navigation .nav ul li{
+    list-style: none;  
+    font-weight: 300;
+    margin-right: 1rem; 
+}
+.profile .navigation .nav ul li a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--primary-text-color);
+    border: solid 0.1rem transparent;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+}
+.profile .navigation .nav ul li a.active{
+    color: var(--primary-color);
+}
+.profile .navigation .nav ul li a:hover{
+    color: var(--primary-color);
+    border: solid 0.1rem var(--primary-color);
+    transition: all 0.5s ease-in-out;
+    border-radius: 0.5rem;
+}
+.profile .navigation .nav ul li:last-child a{
+    padding: 2rem 3rem;
+    border: solid 0.1rem var(--secondary-color);
+    border-radius: 0.5rem;
+    transition: background 0.5s ease-in-out;
+}
+.profile .navigation .nav ul li:last-child a:hover{
+    transition: background 0.5s ease-in-out;
+    background-color: var(--primary-color);
+    border: solid 0.1rem var(--primary-color);
+    color: #fff;
+}
+/* BURGER MENU */
+.profile .burger{
+    width: 100vw;
+    background-color: var(--span-color);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    transform: translateY(-60rem);
+    transition: transform 0.5s ease-in-out;
+}
+.profile .burger ul{
+   
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.profile .burger ul li{
+    list-style: none;
+    margin: 1rem;
+}
+.profile .burger ul li a{
+    color: #fff;
+    font-size: 2rem;
+}
+.profile .burger ul li a:hover{
+    color: var(--primary-color);
+    transition: color 0.2s ease-in-out;
+}
+
+/* PROFILE HEADER */
+.profile .header{
+    position: absolute;
+    left: 10vw;
+    bottom: 20vh;
+    width: 30vw;
+    /* background-color: rgba(0, 0, 0, 0.05); */
+    padding: 4rem;
+    overflow: hidden;
+}
+.profile .header span{
+    font-size: 3rem;
+    color: var(--primary-color);
+    font-weight: 300;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.profile .header span.span{
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+.profile .header h2{
+    font-size: 7rem;
+    color: #fff;
+    transform: translateX(-80rem);
+    transition: transform 0.5s ease;
+
+}
+.profile .header p{
+    font-size: 2rem;
+    color:var(--primary-text-color);
+    margin-bottom: 3rem;
+    transform: translateX(-80rem);
+    transition: transform 1s ease;
+}
+.profile .header a{
+    text-decoration: none;
+    padding: 2rem 3rem;
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 2rem; 
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.profile .header a.btn{
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+.profile .header a:hover{
+    background-color: var(--secondary-color);
+    transition: all 0.5s ease;
+}
+
+@media only screen and (max-width:1400px){
+    .profile .header {
+        width: 50vw;
+    }
+}
+@media only screen and (max-width:900px){
+    html{
+        font-size: 55%;
+    }
+}
+@media only screen and (max-width:800px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media only screen and (max-width:750px){
+    html{
+        font-size: 45%;
+    }
+    .profile .navigation .nav{
+        display: none;
+    }
+    .profile .navigation .burgerIcon.open{
+        display: inline-block;
+    }
+    .profile .header{
+        left: 0;
+        padding-left: 2rem;
+        width: 100vw;
+    }
+}
