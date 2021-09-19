@@ -214,6 +214,9 @@ body{
     html{
         font-size: 45%;
     }
+    .profile .navigation{
+        justify-content: space-between;
+    }
     .profile .navigation .brand img{
         height: 15rem;
         width: auto;
