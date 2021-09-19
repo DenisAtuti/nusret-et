@@ -25,6 +25,9 @@ body{
     height: 100vh;
     background: url("images/profile3.jpg") no-repeat center center/cover;
 }
+.profile .menu{
+    z-index: 100;
+}
 .profile .navigation{
     display: flex;
     justify-content: space-around;
@@ -76,6 +79,7 @@ body{
 }
 /* BURGER MENU */
 .profile .burger{
+    z-index: 200;
     width: 100vw;
     background-color: var(--span-color);
     padding-top: 1.5rem;
@@ -83,8 +87,7 @@ body{
     transform: translateY(-60rem);
     transition: transform 0.5s ease-in-out;
 }
-.profile .burger ul{
-   
+.profile .burger ul{   
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -108,7 +111,6 @@ body{
     left: 10vw;
     bottom: 20vh;
     width: 30vw;
-    /* background-color: rgba(0, 0, 0, 0.05); */
     padding: 4rem;
     overflow: hidden;
 }
@@ -124,7 +126,7 @@ body{
     transition: opacity 1s ease;
 }
 .profile .header h2{
-    font-size: 7rem;
+    font-size: 6rem;
     color: #fff;
     transform: translateX(-80rem);
     transition: transform 0.5s ease;
@@ -160,20 +162,41 @@ body{
 .chef{
     display: flex;
     justify-content: center;
-    margin: 2rem;
+    align-items: center;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
 }
+.chef .chef-header{
+    width: 40vw;
+    margin-left: 5rem;
+}
+
 .chef .chef-header span{
-    
+    font-size: 3rem;
+    color: var(--primary-color);
+    font-weight: 300;
+}
+.chef .chef-header h2{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 7rem;
+    letter-spacing: 0.1rem;
+    line-height: 7rem;
+    color: var(--primary-text-color);
+}
+.chef .chef-header p {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
 }
 .chef .chef-image{
     min-height: 50vh;
-    min-width: 50vw;
+    min-width: 30vw;
     background: url("images/Nusret-profile.jpg") no-repeat center center/cover;
 }
 
 @media only screen and (max-width:1400px){
     .profile .header {
-        width: 50vw;
+        width: 60vw;
     }
 }
 @media only screen and (max-width:900px){
@@ -201,5 +224,8 @@ body{
         left: 0;
         padding-left: 2rem;
         width: 100vw;
+    }
+    .profile .header span{
+        font-size: 2rem;
     }
 }
