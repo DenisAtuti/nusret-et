@@ -240,4 +240,7 @@ body{
     .profile .header span{
         font-size: 2rem;
     }
+    .profile .header h2{
+        font-size: 4rem;
+    }
 }
