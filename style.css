@@ -167,7 +167,7 @@ body{
     margin-bottom: 10rem;
 }
 .chef .chef-header{
-    width: 40vw;
+    width: 30vw;
     margin-left: 5rem;
 }
 
@@ -189,7 +189,7 @@ body{
     letter-spacing: 0.1rem;
 }
 .chef .chef-image{
-    min-height: 50vh;
+    min-height: 100rem;
     min-width: 30vw;
     background: url("images/Nusret-profile.jpg") no-repeat center center/cover;
 }
@@ -237,10 +237,5 @@ body{
         padding-left: 2rem;
         width: 100vw;
     }
-    .profile .header span{
-        font-size: 2rem;
-    }
-    .profile .header h2{
-        font-size: 4rem;
-    }
+
 }
