@@ -19,6 +19,7 @@ html{
 body{
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    /* background-color: whitesmoke; */
 }
 .profile{
     position: relative;
@@ -163,8 +164,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10rem;
+    margin-top: 10rem; 
     margin-bottom: 10rem;
+    background-color: whitesmoke;  
 }
 .chef .chef-header{
     width: 30vw;
@@ -193,6 +195,120 @@ body{
     min-width: 30vw;
     background: url("images/Nusret-profile.jpg") no-repeat center center/cover;
 }
+
+/* MENU SECTION */
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.menu .menu-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+.menu .menu-header span{
+    font-size: 3rem;
+    color: var(--primary-color);
+    font-weight: 300;
+}
+.menu .menu-header h2{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 7rem;
+    letter-spacing: 0.1rem;
+    line-height: 7rem;
+    color: var(--primary-text-color);
+}
+.menu .menu-tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.menu .menu-tabs .menu-item{
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    border: solid 0.1rem transparent;
+    margin-right:1rem ;
+    margin-bottom: 5rem;
+}
+.menu .menu-tabs .menu-item:hover{
+    border: solid 0.1rem var(--secondary-color);
+    transition: border 0.5s ease;
+}
+.menu .menu-tabs .menu-item.active{
+    background-color: var(--primary-color);
+    color: #fff;
+    position: relative;
+}
+.menu .menu-tabs .menu-item.active::after{
+    position: absolute;
+    content: "";
+    height: 0px;
+    width: 0px;
+    top: 100%;
+    left:50% ;
+    border-top: solid 1rem var(--primary-color);
+    border-right: solid 1rem transparent;
+    border-bottom: solid 1rem transparent;
+    border-left: solid 1rem transparent;
+    margin-left: -1rem;
+}
+.menu .tab-content .tab{
+    display: none;   
+}
+.menu .tab-content .tab.active{
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.menu .tab-content .tab.active .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: #fff;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+.menu .tab-content .tab.active .item .item-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(7rem);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.menu .tab-content .tab.active .item:hover > .item-header{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease;
+}
+
+.menu .tab-content .tab.active .item .item-header h3{
+    font-size: 3rem;
+}
+.menu .tab-content .tab.active .item .item-header p{
+    font-size: 1rem;
+}
+.menu .tab-content .tab .item{
+    height: 50rem;
+    width: 40rem;
+}
+.menu .tab-content .tab .cappaccio{
+    background: url("images/profile3.jpg") no-repeat center center/cover;
+}
+
+
 
 @media only screen and (max-width:1400px){
     .profile .header {
@@ -236,6 +352,25 @@ body{
         left: 0;
         padding-left: 2rem;
         width: 100vw;
+    }
+    .chef{
+        flex-direction: column;
+        margin: 0;
+        margin-top: 5rem;
+    }
+    .chef .chef-image{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .chef .chef-header {
+        width: 100%;
+        padding-right: 2rem;
+    }
+    .chef .chef-header span{
+        margin-top: 2rem;
+    }
+    .chef .chef-header h2{
+        font-size: 5rem;
     }
 
 }

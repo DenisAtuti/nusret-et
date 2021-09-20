@@ -29,3 +29,25 @@ burgerCloseIcon.addEventListener("click",()=>{
     burgerCloseIcon.style.display = "none"
     burger.style.transform = "translateY(-60rem)"
 });
+
+// TABS FUNCTIONALITIES
+
+const tabs = document.querySelectorAll('[data-tab-target]')
+const tabContents = document.querySelectorAll(".tab")
+
+tabs.forEach(tab =>{
+    tab.addEventListener("click",()=> {
+
+        tabs.forEach(tab2 =>{
+            tab2.classList.remove("active")
+        })
+
+        tab.classList.add("active")
+        
+        const target = document.querySelector(tab.dataset.tabTarget)
+        tabContents.forEach(tabContent =>{
+            tabContent.classList.remove("active")
+        })
+        target.classList.add("active")
+    })
+})
