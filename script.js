@@ -51,3 +51,25 @@ tabs.forEach(tab =>{
         target.classList.add("active")
     })
 })
+
+// MENU MODEL FUNCTIONALITY
+const menuItems = document.querySelectorAll(".item")
+const menuModel = document.querySelector(".model-container")
+const modelIcon = document.querySelector(".model-icon")
+const modelContent = document.querySelector(".model-content")
+
+menuItems.forEach(item =>{
+    item.addEventListener("click",() =>{
+        menuModel.classList.add("active")
+        modelContent.innerHTML += item.innerHTML;
+        modelContent.classList.add(item.classList[1])
+        console.log(modelContent);
+    })
+})
+
+modelIcon.addEventListener("click",() =>{
+    menuModel.classList.remove("active")
+    modelContent.innerHTML = ''
+    modelContent.classList.remove(modelContent.classList[1])
+    // console.log(modelContent);
+})
