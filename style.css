@@ -280,37 +280,52 @@ body{
     cursor: pointer;
     margin: 0.5rem;
 }
-.menu .tab-content .tab.active .item .item-header{
+.menu .tab-content .tab.active .item .item-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.menu .tab-content .tab.active .item .item-content .item-header{
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     transform: translateY(7rem);
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: transform 0.5s ease;
 }
-.menu .tab-content .tab.active .item:hover > .item-header{
+.menu .tab-content .tab.active .item:hover > .item-content{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.menu .tab-content .tab.active .item:hover >.item-content .item-header{
     opacity: 1;
     transform: translateY(0);
-    transition: all 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
 .menu .tab-content .tab.active .item .item-header h3{
     font-size: 3rem;
+    color: #fff;
 }
 .menu .tab-content .tab.active .item .item-header p{
     font-size: 1rem;
+    color: #fff;
 }
 .menu .tab-content .tab .item{
     height: 50rem;
     width: 40rem;
+    overflow: hidden;
+    position: relative;
 }
-.menu .tab-content .tab .cappaccio{
-    background: url("images/profile3.jpg") no-repeat center center/cover;
-}
-/* MODEL BACKGROUND IMAGES */
-.model-container .model .model-content.cappaccio{
-    background: url("images/profile3.jpg") no-repeat center center/cover;
+.menu .tab-content .tab .item .item-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* MODEL */
@@ -328,12 +343,14 @@ body{
 }
 .model-container.active{
     pointer-events: auto;
-    opacity: 1;
+    opacity: 1; 
+    transition: all 0.5s ease-in;
 }
-.model-container .model{
+.model-container.active .model{
+    position: relative;
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    transition: all 0.5s ease-in;
     margin: 10rem;
 }
 .model-container .model .model-icon{
@@ -347,10 +364,52 @@ body{
 }
 .model-container .model .model-content{
     height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
+.model-container .model .model-content .item-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.model-container .model .model-content .item-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;    
+}
+.model-container .model .model-content .item-content .item-header{
+    height: 100%;
+    width: 100%;   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 5rem;
+    overflow: hidden;
 
-
-
+}
+.model-container .model .model-content .item-content .item-header h3{
+    font-size: 5rem;
+    color: var(--primary-color);
+    font-weight: 200;
+    transform: translateX(-20rem);
+}
+.model-container .model .model-content .item-content .item-header h3.active{
+    transform: translateX(0);
+    transition: transform 0.5s ease 1s;
+}
+.model-container .model .model-content .item-content .item-header p{
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    color: var(--primary-text-color);
+    transform: translateX(-80rem);
+}
+.model-container .model .model-content .item-content .item-header p.active{
+    
+    transform: translateX(0);
+    transition: transform 1s ease 1s;
+}
 
 @media only screen and (max-width:1400px){
     .profile .header {

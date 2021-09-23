@@ -57,19 +57,33 @@ const menuItems = document.querySelectorAll(".item")
 const menuModel = document.querySelector(".model-container")
 const modelIcon = document.querySelector(".model-icon")
 const modelContent = document.querySelector(".model-content")
+// const modelHeader = document.querySelector(".model-content > .item-content > .item-header > h3")
+
+let modelHeader
+let modelParagraph
 
 menuItems.forEach(item =>{
     item.addEventListener("click",() =>{
         menuModel.classList.add("active")
         modelContent.innerHTML += item.innerHTML;
-        modelContent.classList.add(item.classList[1])
+        modelHeader = document.querySelector(".model-content > .item-content > .item-header > h3")
+        modelParagraph = document.querySelector(".model-content > .item-content > .item-header > p")
         console.log(modelContent);
+        console.log(modelHeader);
     })
 })
 
 modelIcon.addEventListener("click",() =>{
     menuModel.classList.remove("active")
     modelContent.innerHTML = ''
-    modelContent.classList.remove(modelContent.classList[1])
+    // modelContent.classList.remove(modelContent.classList[1])
     // console.log(modelContent);
 })
+
+menuModel.addEventListener("mouseenter",() =>{
+    modelHeader.classList.add("active")
+    modelParagraph.classList.add("active")
+
+})
+
+
