@@ -418,8 +418,11 @@ body{
 .table-container{
     display: flex;
     justify-content: center;
-    margin-bottom: 10rem;
-    margin-top: 10rem;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    background-color: whitesmoke;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
 }
 .table-container .table .table-header{
     display: flex;
@@ -459,9 +462,9 @@ body{
     height: 7rem;
     outline: none;
     padding: 1rem 2rem;
-    border: solid 0.1rem whitesmoke;
+    border: solid 0.1rem #fff;
     border-radius: 0.5rem;
-    background-color: whitesmoke;
+    background-color: #fff;
     width: 30rem;
     color: var(--primary-color);
     font-weight: 400;
@@ -472,9 +475,9 @@ body{
     height: 7rem;
     outline: none;
     padding: 1rem 2rem;
-    border: solid 0.1rem whitesmoke;
+    border: solid 0.1rem #fff;
     border-radius: 0.5rem;
-    background-color: whitesmoke;
+    background-color: #fff;
     width: 30rem;
     color: var(--primary-color);
     font-weight: 400;
@@ -511,7 +514,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width:60rem;
+    width:80vw;
 }
 .slider-container .slider-header{
     display: flex;
@@ -569,14 +572,100 @@ body{
     font-weight: 200;
 }
 
+.slider-container .slider button::before{
+    color:var(--primary-color);
+    z-index: 200;
+    font-size: 4rem;
+    /* padding: 3rem; */
+
+}
+.slider-container .slider button.slick-prev.slick-arrow{
+    left: -4rem;
+}
+
+/* CONTACT */
+.message-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-color: whitesmoke;
+}
+.message-container .message-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.message-container .message-header span{
+    font-size: 3rem;
+    color: var(--primary-color);
+    font-weight: 300;
+} 
+.message-container .message-header h2{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 7rem;
+    letter-spacing: 0.1rem;
+    line-height: 7rem;
+    color: var(--primary-text-color);
+}
+.message-container form .form-control input,
+.message-container form .form-control textarea,
+.message-container form .form-btn button
+{
+    font-size:2rem ;
+    width: 30vw;
+    padding: 2rem;
+    outline: none;
+    font-family: inherit;
+    margin: 1rem;
+    border: transparent;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    color: var(--primary-color);
+}
+.message-container form .form-control input::placeholder,
+.message-container form .form-control textarea::placeholder{
+        color: var(--primary-color);
+}
+.message-container form .form-control textarea{
+    resize: none;
+}
+.message-container form .form-btn button{
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: opacity 0.3s ease;
+}
+.message-container form .form-btn button:hover{
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
 @media only screen and (max-width:1400px){
     .profile .header {
         width: 60vw;
+    }
+    /* CONTACT */
+    .message-container form .form-control input,
+    .message-container form .form-control textarea,
+    .message-container form .form-btn button{
+        width: 50vw;
     }
 }
 @media only screen and (max-width:900px){
     html{
         font-size: 55%;
+    }
+    /* CONTACT */
+    .message-container form .form-control input,
+    .message-container form .form-control textarea,
+    .message-container form .form-btn button{
+        width: 60vw;
     }
 }
 @media only screen and (max-width:800px){
@@ -630,6 +719,12 @@ body{
     }
     .chef .chef-header h2{
         font-size: 5rem;
+    }
+
+    .message-container form .form-control input,
+    .message-container form .form-control textarea,
+    .message-container form .form-btn button{
+        width: 80vw;
     }
 
 }

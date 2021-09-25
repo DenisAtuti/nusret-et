@@ -87,9 +87,34 @@ menuModel.addEventListener("mouseenter",() =>{
 })
 
 // CARD SLIDER
-// $('.slider').slick();
+
+function slickSliderResize(windowWidth) {
+    var answer;
+    switch( true ) {
+      case (windowWidth >= 1500) : 
+        answer = 4;
+        break;
+      case (windowWidth >= 1200) : 
+        answer = 3;
+        break;
+      case (windowWidth >= 700) : 
+        answer = 2;
+        break;
+      case (windowWidth >= 600 ) : 
+        answer = 1;
+        break;
+        default:
+            answer = 1;
+    }
+    return answer
+}
 
 window.onload=function(){
+    let windowWidth = window.innerWidth
+    let showSlides = slickSliderResize(windowWidth)
+    // console.log(showSlides);
+    // console.log(windowWidth);
+
     $('.slider').slick({
     autoplay:true,
     autoplaySpeed:1500,
@@ -97,7 +122,7 @@ window.onload=function(){
     prevArrow:'<button type="button" class="slick-prev"></button>',
     nextArrow:'<button type="button" class="slick-next"></button>',
     centerMode:true,
-    slidesToShow:1,
+    slidesToShow:showSlides,
     slidesToScroll:1
     });
   };
