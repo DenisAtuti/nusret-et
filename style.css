@@ -14,6 +14,7 @@
 }
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -112,7 +113,7 @@ body{
     position: absolute;
     left: 10vw;
     bottom: 20vh;
-    width: 30vw;
+    width: 40vw;
     padding: 4rem;
     overflow: hidden;
 }
@@ -644,6 +645,44 @@ body{
 .message-container form .form-btn button:hover{
     opacity: 0.8;
     transition: opacity 0.3s ease;
+}
+
+/* FOOTER */
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    /* background-color: #3f3e3ec4; */
+}
+.footer-container .footer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5rem;
+    flex-wrap: wrap;
+}
+.footer-container .footer h4{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.footer-container .footer ul li{
+    list-style: none;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+
+}
+.footer-container .footer ul li a{
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
+.footer-container .footer .footer-social ul li a i{
+    font-size: 2rem;
+}
+.footer-container .footer-header{
+    align-self: center;
+    font-size: 2rem;
+    font-weight: 150;
+    font-style: italic;
 }
 
 @media only screen and (max-width:1400px){
