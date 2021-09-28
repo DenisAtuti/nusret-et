@@ -1,3 +1,26 @@
+// NAVIGATION MENU
+
+
+navigationMenu = document.querySelector(".profile .profile-menu")
+// let timeout
+function scroll() {
+    timeout = setTimeout(() => { 
+        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+            navigationMenu.classList.add("active")
+        }
+        // }else{
+            // }
+        }, 3000);
+    }
+    
+
+window.addEventListener("scroll",() =>{
+   scroll()
+   navigationMenu.classList.remove("active")
+//    clearTimeout(timeout)
+})
+
+
 // HEADER TRANSITION
 const headerH2 = document.querySelector(".header > h2");
 const headerP = document.querySelector(".header > p")

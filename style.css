@@ -21,20 +21,27 @@ body{
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     position: relative;
-    /* background-color: whitesmoke; */
 }
 .profile{
     position: relative;
     height: 100vh;
     background: url("images/profile3.jpg") no-repeat center center/cover;
 }
-.profile .menu{
-    z-index: 100;
+
+.profile .profile-menu.active{
+    position: fixed;
+    z-index: 200;
 }
 .profile .navigation{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+    transition: all 0.5s ease;
+}
+.profile .profile-menu.active .navigation{
+    background-color: #fff;
+    transition: all 0.5s ease;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 .profile .navigation .burgerIcon{
     font-size: 4rem;
@@ -82,7 +89,6 @@ body{
 }
 /* BURGER MENU */
 .profile .burger{
-    z-index: 200;
     width: 100vw;
     background-color: var(--span-color);
     padding-top: 1.5rem;
@@ -222,7 +228,7 @@ body{
 .menu .menu-header h2{
     margin-top: 2rem;
     margin-bottom: 2rem;
-    font-size: 7rem;
+    font-size: 5rem;
     letter-spacing: 0.1rem;
     line-height: 7rem;
     color: var(--primary-text-color);
@@ -696,9 +702,9 @@ body{
         width: 50vw;
     }
 }
-@media only screen and (max-width:900px){
+@media only screen and (max-width:1000px){
     html{
-        font-size: 55%;
+        font-size: 50%;
     }
     /* CONTACT */
     .message-container form .form-control input,
@@ -709,7 +715,16 @@ body{
 }
 @media only screen and (max-width:800px){
     html{
-        font-size: 50%;
+        font-size: 48%;
+    }
+    .profile .navigation .nav ul li{
+        margin-right: 0;
+    }
+    .profile .navigation .nav ul li a{
+        font-size: 1.5rem;
+    }
+    .profile .navigation{
+        justify-content:center
     }
 }
 
@@ -718,9 +733,7 @@ body{
         font-size: 45%;
     }
     .profile .navigation{
-        justify-content: space-between;
-        margin-left: 2rem;
-        margin-right: 2rem;
+        justify-content: space-around;
     }
     .profile .navigation .brand img{
         height: 15rem;
@@ -735,6 +748,8 @@ body{
     .profile .navigation .burgerIcon.open{
         display: inline-block;
     }
+    
+
     .profile .header{
         left: 0;
         padding-left: 2rem;
@@ -756,8 +771,13 @@ body{
     .chef .chef-header span{
         margin-top: 2rem;
     }
-    .chef .chef-header h2{
-        font-size: 5rem;
+    .chef .chef-header h2,
+    .menu .menu-header h2,
+    .table-container .table .table-header h2,
+    .slider-container .slider-header h2,
+    .message-container .message-header h2
+    {
+        font-size: 4rem;
     }
 
     .message-container form .form-control input,
