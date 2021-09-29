@@ -31,6 +31,7 @@ body{
 .profile .profile-menu.active{
     position: fixed;
     z-index: 200;
+    transition: all 0.5s ease;
 }
 .profile .navigation{
     display: flex;
@@ -350,6 +351,7 @@ body{
     opacity: 0;
 }
 .model-container.active{
+    z-index: 400;
     pointer-events: auto;
     opacity: 1; 
     transition: all 0.5s ease-in;

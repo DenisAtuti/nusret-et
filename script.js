@@ -1,23 +1,20 @@
 // NAVIGATION MENU
 
-
 navigationMenu = document.querySelector(".profile .profile-menu")
-// let timeout
-function scroll() {
-    timeout = setTimeout(() => { 
-        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-            navigationMenu.classList.add("active")
-        }
-        // }else{
-            // }
-        }, 3000);
-    }
-    
+let lastScrollTop = 0;
 
-window.addEventListener("scroll",() =>{
-   scroll()
-   navigationMenu.classList.remove("active")
-//    clearTimeout(timeout)
+function scroll() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if(scrollTop > lastScrollTop){
+        navigationMenu.classList.add("active")
+    }else{
+        navigationMenu.classList.remove("active")
+    }
+    lastScrollTop = scrollTop 
+}
+
+window.addEventListener("scroll",()=>{
+    scroll()
 })
 
 
@@ -88,6 +85,7 @@ let modelParagraph
 menuItems.forEach(item =>{
     item.addEventListener("click",() =>{
         menuModel.classList.add("active")
+        navigationMenu.classList.remove("active")
         modelContent.innerHTML += item.innerHTML;
         modelHeader = document.querySelector(".model-content > .item-content > .item-header > h3")
         modelParagraph = document.querySelector(".model-content > .item-content > .item-header > p")
