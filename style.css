@@ -29,6 +29,7 @@ body{
 }
 
 .profile .profile-menu.active{
+    margin-top: 1rem;
     position: fixed;
     z-index: 200;
     transition: all 0.5s ease;
