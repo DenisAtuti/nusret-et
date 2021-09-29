@@ -32,17 +32,17 @@ body{
     margin-top: 1rem;
     position: fixed;
     z-index: 200;
-    transition: all 0.5s ease;
+    transition: background 0.5s ease;
 }
 .profile .navigation{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    transition: all 0.5s ease;
+    transition: background 0.5s ease;
 }
 .profile .profile-menu.active .navigation{
     background-color: #fff;
-    transition: all 0.5s ease;
+    transition: background 0.5s ease;
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 .profile .navigation .burgerIcon{
