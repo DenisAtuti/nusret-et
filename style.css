@@ -29,8 +29,9 @@ body{
 }
 
 .profile .profile-menu.active{
-    margin-top: 1rem;
     position: fixed;
+    top: 2vh;
+    left: 0;
     z-index: 200;
     transition: background 0.5s ease;
 }
@@ -118,9 +119,10 @@ body{
 
 /* PROFILE HEADER */
 .profile .header{
-    position: absolute;
-    left: 10vw;
-    bottom: 20vh;
+    /* position: absolute; */
+    /* left: 10vw; */
+    /* bottom: 20vh; */
+    margin-left: 10vw;
     width: 40vw;
     padding: 4rem;
     overflow: hidden;
@@ -696,7 +698,7 @@ body{
 
 @media only screen and (max-width:1400px){
     .profile .header {
-        width: 60vw;
+        width: 80vw;
     }
     /* CONTACT */
     .message-container form .form-control input,
@@ -735,6 +737,9 @@ body{
     html{
         font-size: 45%;
     }
+    .profile .profile-menu.active{
+        top: 8vh;
+    }
     .profile .navigation{
         justify-content: space-around;
     }
@@ -754,7 +759,7 @@ body{
     
 
     .profile .header{
-        left: 0;
+        margin-left: 0;
         padding-left: 2rem;
         width: 100vw;
     }
