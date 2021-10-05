@@ -20,14 +20,14 @@ window.addEventListener("scroll",()=>{
 
 // HEADER TRANSITION
 const headerH2 = document.querySelector(".header > h2");
-const headerP = document.querySelector(".header > p")
+// const headerP = document.querySelector(".header > p")
 const headerSpan = document.querySelector(".header > span")
 const headerBtn = document.querySelector(".header > a")
 
 window.addEventListener("load",(e) =>{
     setTimeout(() => {
         headerH2.style.transform = "translateX(0)"
-        headerP.style.transform = "translateX(0)"
+        // headerP.style.transform = "translateX(0)"
         headerSpan.classList.add("span")
         headerBtn.classList.add("btn")
     }, 1000);

@@ -45,6 +45,11 @@ body{
     background-color: #fff;
     transition: background 0.5s ease;
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    width: 100vw;
+}
+.profile .navigation .brand img{
+    height: 10rem;
+    width: auto;
 }
 .profile .navigation .burgerIcon{
     font-size: 4rem;
@@ -119,12 +124,12 @@ body{
 
 /* PROFILE HEADER */
 .profile .header{
-    /* position: absolute; */
-    /* left: 10vw; */
-    /* bottom: 20vh; */
-    margin-left: 10vw;
+    position: absolute;
+    left: 10vw;
+    bottom: 20vh;
+    /* margin-left: 10vw; */
     width: 40vw;
-    padding: 4rem;
+    padding: 2rem;
     overflow: hidden;
 }
 .profile .header span{
@@ -140,18 +145,19 @@ body{
 }
 .profile .header h2{
     font-size: 6rem;
+    margin-bottom: 2rem;
     color: #fff;
     transform: translateX(-80rem);
-    transition: transform 0.5s ease;
+    transition: transform 1s ease;
 
 }
-.profile .header p{
+/* .profile .header p{
     font-size: 2rem;
     color:var(--primary-text-color);
     margin-bottom: 3rem;
     transform: translateX(-80rem);
     transition: transform 1s ease;
-}
+} */
 .profile .header a{
     text-decoration: none;
     padding: 2rem 3rem;
@@ -669,7 +675,7 @@ body{
 .footer-container .footer{
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 5rem;
+    margin: 3rem;
     flex-wrap: wrap;
 }
 .footer-container .footer h4{
@@ -738,13 +744,13 @@ body{
         font-size: 45%;
     }
     .profile .profile-menu.active{
-        top: 8vh;
+        top: 2vh;
     }
     .profile .navigation{
         justify-content: space-around;
     }
     .profile .navigation .brand img{
-        height: 15rem;
+        height: 10rem;
         width: auto;
     }
     .profile .navigation .burgerIcon{
