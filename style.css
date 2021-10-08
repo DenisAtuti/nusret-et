@@ -34,7 +34,7 @@ body{
 
 .profile .profile-menu.active{
     position: fixed;
-    top: 2vh;
+    /* top: 12vh; */
     left: 0;
     z-index: 200;
     transition: background 0.5s ease;
@@ -741,18 +741,18 @@ body{
     .profile .navigation{
         justify-content:center
     }
-    .profile .profile-menu.active{
-        top: 12vh;
-    }
+    /* .profile .profile-menu.active{
+        top:0;
+    } */
 }
 
 @media only screen and (max-width:750px){
     html{
         font-size: 45%;
     }
-    .profile .profile-menu.active{
-        top: 12vh;
-    }
+    /* .profile .profile-menu.active{
+        top: 0;
+    } */
     .profile .navigation{
         justify-content: space-around;
     }
