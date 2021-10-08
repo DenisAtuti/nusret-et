@@ -30,7 +30,6 @@ body{
 .profile .profile-menu{
     position: absolute;
     z-index: 200;
-    background-color: green;
 }
 
 .profile .profile-menu.active{
@@ -743,7 +742,7 @@ body{
         justify-content:center
     }
     .profile .profile-menu.active{
-        top: 2vh;
+        top: 12vh;
     }
 }
 
@@ -752,7 +751,7 @@ body{
         font-size: 45%;
     }
     .profile .profile-menu.active{
-        top: 2vh;
+        top: 12vh;
     }
     .profile .navigation{
         justify-content: space-around;
