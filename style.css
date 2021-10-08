@@ -737,6 +737,9 @@ body{
     .profile .navigation{
         justify-content:center
     }
+    .profile .profile-menu.active{
+        top: 1vh;
+    }
 }
 
 @media only screen and (max-width:750px){
@@ -744,7 +747,7 @@ body{
         font-size: 45%;
     }
     .profile .profile-menu.active{
-        top: 12vh;
+        top: 1vh;
     }
     .profile .navigation{
         justify-content: space-around;
