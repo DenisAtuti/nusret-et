@@ -738,7 +738,7 @@ body{
         justify-content:center
     }
     .profile .profile-menu.active{
-        top: 1vh;
+        top: 2vh;
     }
 }
 
@@ -747,7 +747,7 @@ body{
         font-size: 45%;
     }
     .profile .profile-menu.active{
-        top: 1vh;
+        top: 2vh;
     }
     .profile .navigation{
         justify-content: space-around;
