@@ -27,6 +27,10 @@ body{
     height: 100vh;
     background: url("images/profile3.jpg") no-repeat center center/cover;
 }
+.profile .profile-menu{
+    position: absolute;
+    z-index: 200;
+}
 
 .profile .profile-menu.active{
     position: fixed;
