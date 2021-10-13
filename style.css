@@ -750,9 +750,9 @@ body{
     html{
         font-size: 45%;
     }
-    /* .profile .profile-menu.active{
-        margin-top: 14rem;
-    } */
+    .profile .profile-menu.active{
+        margin-top: 3rem;
+    }
     .profile .navigation{
         justify-content: space-around;
     }
