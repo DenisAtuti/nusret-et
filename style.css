@@ -31,6 +31,8 @@ body{
 .profile .profile-menu{
     position: absolute;
     z-index: 200;
+    height: auto;
+    height: 10rem;
 }
 
 .profile .profile-menu.active{
@@ -105,6 +107,7 @@ body{
     background-color: var(--span-color);
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    /* pointer-events: none; */
     transform: translateY(-60rem);
     transition: transform 0.5s ease-in-out;
 }
