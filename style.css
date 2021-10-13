@@ -21,6 +21,7 @@ body{
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     position: relative;
+    width:100vw;
 }
 .profile{
     position: relative;
@@ -750,7 +751,7 @@ body{
         font-size: 45%;
     }
     /* .profile .profile-menu.active{
-        top: 0;
+        margin-top: 14rem;
     } */
     .profile .navigation{
         justify-content: space-around;
@@ -773,7 +774,16 @@ body{
     .profile .header{
         margin-left: 0;
         padding-left: 2rem;
-        width: 100vw;
+        width: 90%;
+    }
+    .profile .header span{
+        font-size: 2rem;
+    }
+    .profile .header h2{
+        font-size: 4rem;
+    }
+    .profile .header a{
+        padding: 1.5rem 2.5rem;
     }
     .chef{
         flex-direction: column;
